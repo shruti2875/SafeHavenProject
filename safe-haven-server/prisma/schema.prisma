@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int          @id @default(autoincrement())
+  email        String        @unique
+  passwordHash String
+  name         String?
+  phone        String?
+  role         String        @default("user")
+  createdAt    DateTime      @default(now())
+  contacts     Contact[]
+  incidents    Incident[]
+  safetyPlans  SafetyPlan[] 
+}
+
+model Contact {
+  id          Int      @id @default(autoincrement())
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+  name        String
+  phone       String
+  relation    String?
+  createdAt   DateTime @default(now())
+  isEmergency Boolean  @default(false)
+}
+
+model Incident {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  location    String?
+  date        DateTime?
+  time        String?
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+  createdAt   DateTime @default(now())
+}
+
+model SafetyPlan {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  category  String   @default("General")
+  text      String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id])
+}
