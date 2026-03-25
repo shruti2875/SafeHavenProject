@@ -56,7 +56,7 @@ Live location tracking
 AI-based threat detection
 Wearable device integration
 Cloud deployment
-👨‍💻 Author
+ 👨‍💻 Author
 Shruti Shejul
 
 📜 License
