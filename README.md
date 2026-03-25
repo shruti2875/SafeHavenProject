@@ -9,9 +9,13 @@ Real-time SMS and call alerts
 Push notifications for rapid response
 Encrypted data transmission
 Simple and user-friendly interface
+
 📸 Screenshot
-Screenshot1.png
-Screenshot2.png
+## 📸 Screenshots
+
+![Screenshot 1](./screenshot%201.png)
+
+![Screenshot 2](./screenshot%202.png)
 
 
 🏗️ System Architecture
