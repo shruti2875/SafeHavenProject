@@ -10,8 +10,9 @@ Push notifications for rapid response
 Encrypted data transmission
 Simple and user-friendly interface
 📸 Screenshot
+Screenshot1.png
+Screenshot2.png
 
-Add your app screenshots here
 
 🏗️ System Architecture
 Mobile app sends alert request
